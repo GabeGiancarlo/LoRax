@@ -1,0 +1,54 @@
+# LoRax .gitignore
+
+# Build artifacts
+build/
+dist/
+*.o
+*.elf
+*.bin
+*.hex
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Arduino IDE
+*.ino.bak
+
+# KiCad files
+*.kicad_pcb-bak
+*.pro-bak
+*.sch-bak
+
+# 3D printing
+*.gcode
+*.stl.bak
+
+# Documentation builds
+docs/_build/
+docs/build/
+
+# Python (if used for build scripts)
+__pycache__/
+*.pyc
+*.pyo
+
+# Node modules (if used for web interfaces)
+node_modules/
+
+# Backup files
+*.bak
+*.backup
+*~

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# LoRax Rootfs Startup Script
+# Adapted from KaliAssistant's Fox-Jack (https://github.com/KaliAssistant/Fox-Jack)
+# Original Fox-Jack startup logic with LoRax modifications
+
+echo "🚀 Starting LoRax system..."
+
+# Initialize LoRa module
+echo "📡 Initializing LoRa module..."
+# TODO: Add LoRa initialization commands
+
+# Start network scanning services
+echo "🔍 Starting network scanning services..."
+# TODO: Add Nmap/ARP service startup
+
+# Initialize battery management
+echo "🔋 Starting battery management..."
+# TODO: Add battery telemetry startup
+
+echo "✅ LoRax system started!"
