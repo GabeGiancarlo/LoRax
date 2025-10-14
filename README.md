@@ -38,18 +38,27 @@ LoRax/
 - **Power Efficient**: 2-3 day battery life with 500mAh LiPo
 - **Expandable**: Modular design for future enhancements
 
-## Credits & Acknowledgments
+## Fox-Jack Integration
 
 **Built on KaliAssistant's Fox-Jack – core SDK and mode system.**
 
-This project is a remix and evolution of the excellent [Fox-Jack](https://github.com/KaliAssistant/Fox-Jack) by KaliAssistant. We gratefully acknowledge the following components that were adapted from Fox-Jack:
+This project integrates the complete [Fox-Jack](https://github.com/KaliAssistant/Fox-Jack) repository as a submodule, providing access to:
 
-- **SDK & Build System**: Core build scripts and development environment
-- **Mode Framework**: Modular task system and initialization scripts  
-- **PCB Assets**: Reference design files and component libraries
-- **Rootfs Logic**: Startup scripts and system configuration
+### 📁 **Fox-Jack Components Available**
+- **`fox-jack/`** - Complete Fox-Jack repository (submodule)
+- **`build.sh.foxjack`** - Original Fox-Jack build script
+- **`dep.sh.foxjack`** - Original Fox-Jack dependency script  
+- **`src.foxjack/`** - Fox-Jack source code and drivers
+- **`enclosures/fox-jack-reference/`** - Original Fox-Jack 3D models
 
-Special thanks to KaliAssistant for the open-source foundation and permission to remix with proper attribution.
+### 🔧 **Key Fox-Jack Files**
+- **Build System**: Docker-based Luckfox SDK build environment
+- **Source Code**: Battery management, LED control, mode switching
+- **PCB Design**: Complete KiCad project files and Gerbers
+- **3D Models**: Original Fox-Jack enclosure STL files
+
+### 📋 **Attribution**
+Special thanks to KaliAssistant for the open-source foundation and explicit permission to remix with proper attribution.
 
 ## License
 
