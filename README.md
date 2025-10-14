@@ -45,11 +45,10 @@ LoRax/
 This project integrates the complete [Fox-Jack](https://github.com/KaliAssistant/Fox-Jack) repository as a submodule, providing access to:
 
 ### 📁 **Fox-Jack Components Available**
-- **`fox-jack/`** - Complete Fox-Jack repository (submodule)
-- **`build.sh.foxjack`** - Original Fox-Jack build script
-- **`dep.sh.foxjack`** - Original Fox-Jack dependency script  
-- **`src.foxjack/`** - Fox-Jack source code and drivers
-- **`enclosures/fox-jack-reference/`** - Original Fox-Jack 3D models
+- **`fox-jack/`** - Complete Fox-Jack repository (submodule) - **Reference Only**
+- **`build.sh.foxjack`** - Original Fox-Jack build script - **Reference Only**
+- **`dep.sh.foxjack`** - Original Fox-Jack dependency script - **Reference Only**
+- **`enclosures/fox-jack-reference/`** - Original Fox-Jack 3D models - **Reference Only**
 
 ### 🔧 **Key Fox-Jack Files**
 - **Build System**: Docker-based Luckfox SDK build environment
@@ -59,6 +58,23 @@ This project integrates the complete [Fox-Jack](https://github.com/KaliAssistant
 
 ### 📋 **Attribution**
 Special thanks to KaliAssistant for the open-source foundation and explicit permission to remix with proper attribution.
+
+## Development vs Reference Files
+
+### 🔧 **LoRax Development Files**
+- **`build.sh`** - LoRax build script (adapts Fox-Jack build system)
+- **`dep.sh`** - LoRax dependencies (adapts Fox-Jack dependency management)
+- **`rootfs/rcS`** - LoRax startup script (adapts Fox-Jack initialization)
+- **`pcb/A_endpoint/`** - LoRax endpoint PCB components
+- **`pcb/B_controller/`** - LoRax controller PCB components
+- **`firmware/`** - LoRax firmware development
+
+### 📚 **Fox-Jack Reference Files**
+- **`fox-jack/`** - Complete Fox-Jack repository (submodule)
+- **`build.sh.foxjack`** - Original Fox-Jack build script
+- **`dep.sh.foxjack`** - Original Fox-Jack dependency script
+- **`enclosures/fox-jack-reference/`** - Fox-Jack 3D models
+- **`pcb/reference/`** - Fox-Jack PCB reference files
 
 ## License
 

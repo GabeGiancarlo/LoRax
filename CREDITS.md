@@ -11,8 +11,8 @@ This project is a remix and evolution of the excellent [Fox-Jack](https://github
 The following components from Fox-Jack have been adapted for LoRax:
 
 ### Build System & SDK
-- **build.sh**: Core build script framework
-- **dep.sh**: Dependency management system  
+- **build.sh**: LoRax build script (adapts Fox-Jack build framework)
+- **dep.sh**: LoRax dependency management (adapts Fox-Jack dependency system)
 - **SDK Integration**: Luckfox development environment setup
 
 ### System Framework
@@ -24,6 +24,24 @@ The following components from Fox-Jack have been adapted for LoRax:
 - **Component Selection**: Reference design files and part libraries
 - **Layout Concepts**: Extension board design principles
 - **Reference Files**: Original Fox-Jack PCB assets in `pcb/reference/`
+
+## Fox-Jack Reference Files
+
+The following files are preserved for reference and attribution:
+
+### Reference Scripts
+- **`build.sh.foxjack`**: Original Fox-Jack build script (GNU GPL v3)
+- **`dep.sh.foxjack`**: Original Fox-Jack dependency script (GNU GPL v3)
+
+### Reference Repository
+- **`fox-jack/`**: Complete Fox-Jack repository as submodule (GNU GPL v3)
+  - Source code: `fox-jack/src/` (battery management, LED control, mode switching)
+  - PCB files: `fox-jack/pcb/` (KiCad projects and Gerbers)
+  - 3D models: `fox-jack/3dp/` (enclosure STL files)
+
+### Reference Assets
+- **`enclosures/fox-jack-reference/`**: Fox-Jack 3D models for reference
+- **`pcb/reference/`**: Fox-Jack PCB reference files
 
 ## Permission & License
 

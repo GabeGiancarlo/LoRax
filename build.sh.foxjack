@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Original Fox-Jack Build Script
+# Source: KaliAssistant's Fox-Jack (https://github.com/KaliAssistant/Fox-Jack)
+# Used as reference for LoRax build system development
+# This file is preserved for attribution and reference purposes
+
 set -e
 
 if [ "$EUID" -ne 0 ]
