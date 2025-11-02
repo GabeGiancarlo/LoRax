@@ -1,18 +1,46 @@
 <div align="center">
 
-# 🌳 LoRax — A LoRa-Powered Penetration Testing Ecosystem
+# 🌳 LoRax — A LoRa-Powered Network Security Education Platform
 
 > *"I am the Lorax. I speak for the trees."*  
-> *"And the trees are scanning your network."*
+> *"And the trees are learning about networks."*
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Built on Fox-Jack](https://img.shields.io/badge/Built%20on-Fox--Jack-orange)](https://github.com/KaliAssistant/Fox-Jack)
 
-**A modular, expandable, keychain-sized LoRa mesh for remote network reconnaissance**
+**A modular, expandable, keychain-sized LoRa mesh for network security education and authorized security assessments**
 
 *Unless someone like you cares a whole awful lot, nothing is going to get better. It's not.*
 
 </div>
+
+---
+
+## ⚠️ Educational Purpose Disclaimer
+
+**LoRax is designed for educational purposes and authorized security assessments only.**
+
+This project is intended to:
+- **Learn** about network security, mesh networking, and LoRa communication
+- **Understand** how network scanning and analysis tools work
+- **Conduct** authorized security assessments on networks you own or have explicit permission to test
+- **Study** cryptography, mesh protocols, and embedded systems development
+
+**⚠️ WARNING**: Unauthorized access to computer networks is illegal in most jurisdictions. Only use LoRax on networks you own or have explicit written authorization to test. The developers assume no liability for misuse of this project.
+
+---
+
+## 🙏 Built on KaliAssistant's Fox-Jack
+
+**LoRax is built on and extends the excellent [Fox-Jack](https://github.com/KaliAssistant/Fox-Jack) by KaliAssistant.**
+
+This project would not exist without KaliAssistant's groundbreaking work on Fox-Jack. LoRax adapts and extends Fox-Jack's build system, SDK framework, and PCB design concepts with permission. We are deeply grateful to KaliAssistant for:
+
+- **Open Source Leadership**: Creating and sharing the Fox-Jack foundation
+- **Explicit Permission**: Granting permission for remix and attribution
+- **Technical Excellence**: Building a robust, professional-grade hardware/software system
+
+See [Attribution](#-attribution) and [`CREDITS.md`](CREDITS.md) for complete details on how LoRax builds upon Fox-Jack.
 
 ---
 
@@ -30,13 +58,15 @@
 - [Development](#development)
 - [Contributing](#contributing)
 - [Security](#security)
-- [Attribution](#attribution)
+- [Attribution](#-attribution)
 
 ---
 
 ## 🎯 Overview
 
-LoRax is a **professional-grade, open-source LoRa mesh ecosystem** designed for remote network reconnaissance and penetration testing operations. The system consists of multiple interoperable devices that communicate over **915MHz LoRa** (868MHz for EU) using a **secure mesh protocol** with **HMAC-authenticated packets** and **AES-256-GCM encrypted payloads**.
+LoRax is a **professional-grade, open-source LoRa mesh ecosystem** designed for network security education and authorized security assessments. The system consists of multiple interoperable devices that communicate over **915MHz LoRa** (868MHz for EU) using a **secure mesh protocol** with **HMAC-authenticated packets** and **AES-256-GCM encrypted payloads**.
+
+Built on **KaliAssistant's Fox-Jack** foundation, LoRax extends the original concept with a modular device ecosystem, comprehensive documentation, and educational resources for learning about network security, mesh networking, and LoRa communication.
 
 ### Key Features
 
@@ -145,8 +175,8 @@ LoRax/
 | Command | Value | Description |
 |--------|-------|-------------|
 | `HELLO` | `0x01` | Mesh discovery broadcast (30s interval) |
-| `SCAN` | `0x02` | Network scan request (Nmap, ARP, custom) |
-| `RESULT` | `0x03` | Scan results response |
+| `SCAN` | `0x02` | Network analysis request (Nmap, ARP, custom) |
+| `RESULT` | `0x03` | Analysis results response |
 | `ROUTE` | `0x04` | Routing table update / topology info |
 | `PING` | `0x05` | Connectivity test / latency measurement |
 
@@ -182,9 +212,8 @@ LoRax/
 
 #### Capabilities
 
-- **Network Scanning**: Nmap integration (TCP SYN, UDP, ARP discovery)
-- **ARP Spoofing**: MITM capability (requires proximity)
-- **Custom Tools**: Execute custom network reconnaissance scripts
+- **Network Analysis**: Nmap integration for authorized network assessment (TCP SYN, UDP, ARP discovery)
+- **Network Learning**: Execute custom network analysis scripts for educational purposes
 - **Stealth Operation**: No WiFi/BT emissions, LoRa invisible to scanners
 - **Remote Control**: Receive commands via LoRa mesh, execute scans autonomously
 
@@ -205,7 +234,7 @@ LoRax/
 > *"The Once-ler had a cart and the cart had a horn."*  
 > Bar-ba-loot has buttons and an OLED. Much better.
 
-**Bar-ba-loot** is a **handheld command & control device** with an OLED display and tactile buttons for sending scan commands to remote Lorax endpoints.
+**Bar-ba-loot** is a **handheld control device** with an OLED display and tactile buttons for sending commands to remote Lorax endpoints for authorized network analysis.
 
 #### Specifications
 
@@ -225,7 +254,7 @@ LoRax/
 - **OLED UI**: Menu system with device list, scan type selection, status display
 - **Tactile Buttons**: Navigation, selection, command sending
 - **Mesh Management**: View connected devices, hop count, RSSI, battery status
-- **Command Interface**: Send Nmap scans, ARP discovery, custom commands
+- **Command Interface**: Send authorized Nmap scans, ARP discovery, and custom network analysis commands
 - **Result Display**: View scan results on OLED (truncated for large outputs)
 
 #### Firmware Stack
@@ -411,29 +440,29 @@ cd devices/bar-ba-loot/firmware
 
 ## 📖 Usage
 
-### Deployment Scenario
+### Usage Scenario
 
-**Scenario**: Remote network reconnaissance of target facility
+**Scenario**: Authorized network security assessment on your own network or a network with explicit written permission
 
-1. **Deploy Tree Node** (1.5km from target, elevated position)
+1. **Deploy Tree Node** (1.5km from assessment area, elevated position)
    - Place Tree Node in elevated location (tree, building, antenna mast)
    - Extend 10dBi antenna for maximum range
    - Power on → Tree Node auto-joins mesh via HELLO broadcast
 
-2. **Deploy Lorax Endpoint** (near target network)
-   - Place Lorax device near target facility (vent, under car, foliage)
+2. **Deploy Lorax Endpoint** (near authorized assessment network)
+   - Place Lorax device near the authorized network (vent, secure location, foliage)
    - Device enters deep sleep, waits for commands
 
 3. **Send Command from Bar-ba-loot**
    - Power on controller, OLED shows connected devices
    - Navigate menu → Select Lorax endpoint
-   - Select scan type → "Nmap TCP SYN Scan"
+   - Select analysis type → "Nmap TCP SYN Scan"
    - Send command → Packet routed via Tree Node to Lorax
 
 4. **Receive Results**
-   - Lorax executes scan, results encrypted with AES-256-GCM
+   - Lorax executes authorized analysis, results encrypted with AES-256-GCM
    - Results forwarded back via Tree Node to Bar-ba-loot
-   - Display on OLED → Review network topology
+   - Display on OLED → Review network topology for educational purposes
 
 ### Command Examples
 
@@ -534,7 +563,7 @@ When adding a new device:
 
 2. **Deployment**
    - Change default keys immediately after deployment
-   - Deploy devices discretely (avoid detection)
+   - Only deploy on networks you own or have explicit authorization to test
    - Monitor battery levels (low battery exposes devices during charging)
    - Update firmware regularly for security patches
 
@@ -578,18 +607,22 @@ Each device has comprehensive documentation:
 
 ## 🎓 Attribution
 
-### Fox-Jack Foundation
+### Built on KaliAssistant's Fox-Jack
 
-**LoRax is built on [KaliAssistant's Fox-Jack](https://github.com/KaliAssistant/Fox-Jack).**
+**LoRax is built on and extends [KaliAssistant's Fox-Jack](https://github.com/KaliAssistant/Fox-Jack).** We are deeply grateful to KaliAssistant for creating this excellent foundation and granting permission for remix and attribution.
 
-This project is a remix and evolution of the excellent Fox-Jack by KaliAssistant, created with explicit permission for remix and attribution.
+#### Core Fox-Jack Components
 
-#### Fox-Jack Components Used
+LoRax adapts and extends several key components from Fox-Jack:
 
-- **Build System**: LoRax build scripts adapt Fox-Jack build framework
-- **SDK Integration**: Luckfox development environment setup
-- **System Framework**: Mode system, initialization scripts, service management
-- **PCB Design**: Reference design files, component selection, layout concepts
+- **Build System**: LoRax build scripts (`shared/build/build.sh`, `shared/build/dep.sh`) adapt Fox-Jack's build framework
+- **SDK Integration**: Luckfox development environment setup and SDK integration patterns
+- **System Framework**: Mode system architecture, initialization scripts (`rootfs/rcS`), service management patterns
+- **PCB Design**: Reference design files in `shared/reference/`, component selection guidelines, layout concepts
+
+#### Fox-Jack Reference Files
+
+The original Fox-Jack repository is included as a submodule at `shared/reference/fox-jack/` for reference and attribution. All original Fox-Jack files are preserved with their original licenses and attribution.
 
 #### Attribution Requirements
 
@@ -598,7 +631,23 @@ All files adapted from Fox-Jack include the attribution header:
 // Adapted from KaliAssistant's Fox-Jack (https://github.com/KaliAssistant/Fox-Jack)
 ```
 
-**Full Attribution**: See [`CREDITS.md`](CREDITS.md) for complete credits and attribution.
+This attribution appears in:
+- Build scripts (`shared/build/build.sh`, `shared/build/dep.sh`)
+- SDK headers (`shared/sdk/lorax_*.h`)
+- System initialization scripts (`devices/lorax/rootfs/rcS`)
+- PCB design documentation
+
+#### Permission & License
+
+This remix is created with explicit written permission from KaliAssistant, as documented in email correspondence. The permission includes:
+- Remix and build upon Fox-Jack
+- Maintain proper attribution in README and file headers
+- Include acknowledgment of reused components
+- Preserve attribution on files that originate from Fox-Jack
+
+**Full Attribution**: See [`CREDITS.md`](CREDITS.md) for complete credits, attribution, and license details.
+
+**Original Fox-Jack**: [https://github.com/KaliAssistant/Fox-Jack](https://github.com/KaliAssistant/Fox-Jack) (GNU GPL v3)
 
 ---
 
@@ -621,8 +670,10 @@ By contributing, you agree to license your contributions under the same license 
 LoRax takes its name and playful spirit from Dr. Seuss's *The Lorax*, a story about environmental responsibility and the importance of caring for what matters. In our case, we care about:
 
 - **Openness**: Open hardware and software, transparent security
-- **Responsibility**: Ethical use of penetration testing tools
+- **Responsibility**: Ethical use of security tools for education and authorized assessments only
+- **Education**: Learning about network security, mesh networking, and embedded systems
 - **Community**: Collaborative development and knowledge sharing
+- **Attribution**: Proper credit to KaliAssistant and the Fox-Jack foundation
 - **Trees**: Actually, we do care about trees too. Print enclosures in recycled filament when possible.
 
 ---
@@ -637,10 +688,12 @@ LoRax takes its name and playful spirit from Dr. Seuss's *The Lorax*, a story ab
 
 ## 🙏 Acknowledgments
 
-- **KaliAssistant**: Original Fox-Jack foundation and permission for remix
+- **KaliAssistant**: Original Fox-Jack foundation, open-source leadership, and explicit permission for remix. LoRax would not exist without KaliAssistant's excellent work.
 - **Luckfox Technology**: Hardware platform and SDK support
 - **LoRa Alliance**: LoRaWAN specification and reference designs
 - **Dr. Seuss**: For the inspiration (*The Lorax*, 1971)
+
+**Special Thanks**: We extend our deepest gratitude to KaliAssistant for creating Fox-Jack and making it available under GPL v3, enabling projects like LoRax to build upon this foundation.
 
 ---
 
