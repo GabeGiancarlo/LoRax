@@ -1,3 +1,3 @@
 [submodule "fox-jack"]
-	path = fox-jack
+	path = shared/reference/fox-jack
 	url = https://github.com/KaliAssistant/Fox-Jack.git

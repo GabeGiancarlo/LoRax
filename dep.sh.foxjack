@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Original Fox-Jack Dependencies Script
-# Source: KaliAssistant's Fox-Jack (https://github.com/KaliAssistant/Fox-Jack)
-# Used as reference for LoRax dependency management
-# This file is preserved for attribution and reference purposes
-
-git submodule update --init --recursive
