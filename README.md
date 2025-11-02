@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌳 LoRax — A LoRa-Powered Network Security Education Platform
+# 🌳 LoRax — A LoRa-Powered Penetration Testing Ecosystem
 
 > *"I am the Lorax. I speak for the trees."*  
 > *"And the trees are learning about networks."*
@@ -8,7 +8,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Built on Fox-Jack](https://img.shields.io/badge/Built%20on-Fox--Jack-orange)](https://github.com/KaliAssistant/Fox-Jack)
 
-**A modular, expandable, keychain-sized LoRa mesh for network security education and authorized security assessments**
+**A modular, expandable, keychain-sized LoRa mesh for penetration testing education and authorized security assessments**
 
 *Unless someone like you cares a whole awful lot, nothing is going to get better. It's not.*
 
@@ -16,17 +16,26 @@
 
 ---
 
-## ⚠️ Educational Purpose Disclaimer
+## 🎓 Educational Project — Learning Cybersecurity
 
-**LoRax is designed for educational purposes and authorized security assessments only.**
+**LoRax is my educational project created while learning to become a cybersecurity professional.**
 
-This project is intended to:
-- **Learn** about network security, mesh networking, and LoRa communication
-- **Understand** how network scanning and analysis tools work
-- **Conduct** authorized security assessments on networks you own or have explicit permission to test
-- **Study** cryptography, mesh protocols, and embedded systems development
+This project represents my journey into cybersecurity, where I'm learning about:
+- **Penetration Testing**: Understanding how network security assessment tools work
+- **Embedded Systems**: Building and programming hardware for security applications
+- **Mesh Networking**: Designing and implementing secure communication protocols
+- **Cryptography**: Implementing HMAC, AES-256-GCM, and secure key management
+- **Open Source Hardware**: Creating PCB designs, firmware, and documentation
 
-**⚠️ WARNING**: Unauthorized access to computer networks is illegal in most jurisdictions. Only use LoRax on networks you own or have explicit written authorization to test. The developers assume no liability for misuse of this project.
+### Project Intent
+
+This is an **educational project** for learning cybersecurity through hands-on experience. The goal is to:
+- **Build real skills** in penetration testing, hardware development, and secure networking
+- **Learn by doing** — understanding security concepts by implementing them
+- **Contribute to open source** — sharing knowledge and learning from the community
+- **Prepare for a career** in cybersecurity by creating a portfolio project
+
+**⚠️ IMPORTANT**: Unauthorized access to computer networks is illegal in most jurisdictions. This project is for educational purposes and authorized security assessments only. Only use LoRax on networks you own or have explicit written authorization to test. The developers assume no liability for misuse of this project.
 
 ---
 
@@ -64,9 +73,9 @@ See [Attribution](#-attribution) and [`CREDITS.md`](CREDITS.md) for complete det
 
 ## 🎯 Overview
 
-LoRax is a **professional-grade, open-source LoRa mesh ecosystem** designed for network security education and authorized security assessments. The system consists of multiple interoperable devices that communicate over **915MHz LoRa** (868MHz for EU) using a **secure mesh protocol** with **HMAC-authenticated packets** and **AES-256-GCM encrypted payloads**.
+LoRax is a **professional-grade, open-source LoRa mesh penetration testing ecosystem** designed for learning cybersecurity through hands-on experience with authorized security assessments. The system consists of multiple interoperable devices that communicate over **915MHz LoRa** (868MHz for EU) using a **secure mesh protocol** with **HMAC-authenticated packets** and **AES-256-GCM encrypted payloads**.
 
-Built on **KaliAssistant's Fox-Jack** foundation, LoRax extends the original concept with a modular device ecosystem, comprehensive documentation, and educational resources for learning about network security, mesh networking, and LoRa communication.
+Built on **KaliAssistant's Fox-Jack** foundation, LoRax extends the original concept with a modular device ecosystem, comprehensive documentation, and educational resources for learning penetration testing, network security, mesh networking, and LoRa communication.
 
 ### Key Features
 
