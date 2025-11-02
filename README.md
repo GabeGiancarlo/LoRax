@@ -43,7 +43,7 @@ This is an **educational project** for learning cybersecurity through hands-on e
 
 **LoRax is built on and extends the excellent [Fox-Jack](https://github.com/KaliAssistant/Fox-Jack) by KaliAssistant.**
 
-This project would not exist without KaliAssistant's groundbreaking work on Fox-Jack. LoRax adapts and extends Fox-Jack's build system, SDK framework, and PCB design concepts with permission. We are deeply grateful to KaliAssistant for:
+This project would not exist without KaliAssistant's work on Fox-Jack. LoRax adapts and extends Fox-Jack's build system, SDK framework, and PCB design concepts with permission. We are deeply grateful to KaliAssistant for:
 
 - **Open Source Leadership**: Creating and sharing the Fox-Jack foundation
 - **Explicit Permission**: Granting permission for remix and attribution
