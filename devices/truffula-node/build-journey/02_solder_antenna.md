@@ -2,7 +2,7 @@
 
 ## Antenna Assembly
 
-The Truffula Node uses a **pop-out 10dBi antenna** for extended range.
+The Truffula Node uses a **5dBi whip antenna** (recommended, ~12cm) or **10dBi antenna** (optional, ~19cm) for extended range. The 5dBi antenna provides a good balance of size and range (~2km).
 
 ### Step 1: Antenna Connector
 
@@ -72,6 +72,13 @@ The Truffula Node uses a **pop-out 10dBi antenna** for extended range.
 - **RFM95W not detected**: Check SPI connections, CS pin
 - **No antenna**: Device will damage RFM95W — always attach antenna!
 - **Battery not detected**: Check MAX17048 connections, I2C address
+
+## Alternative: Custom PCB with Integrated RFM95W
+
+For a more compact design, consider creating a custom PCB that integrates the RFM95W module directly. See [Step 2a: Solder RFM95W Module to Custom PCB](02a_solder_rfm95w_pcb.md) for detailed instructions on:
+- Soldering RFM95W to custom PCB
+- CAD design workflow (KiCad/Eagle)
+- Antenna size alternatives
 
 ## Next Steps
 
