@@ -51,6 +51,12 @@ A **portable controller** with:
 | Battery | 500mAh LiPo |
 | Runtime | 2-3 days active |
 
+![Bar-ba-loot PCB Top](../../shared/media/images/devices/bar-ba-loot/bar-ba-loot-pcb-top.jpg)
+*Bar-ba-loot PCB (top view)*
+
+![Kailh Choc Switch](../../shared/media/images/devices/bar-ba-loot/kailh-choc-switch.jpg)
+*Kailh Choc Low Profile Tactile Switch*
+
 ---
 
 ## Firmware
