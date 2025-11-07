@@ -5,7 +5,7 @@
 
 <div align="center">
 
-![The Lorax](shared/media/images/reference/lorax-movie.avif)
+![The Lorax](../../shared/media/images/reference/lorax-movie.avif)
 *The Lorax — speaking for network security*
 
 </div>

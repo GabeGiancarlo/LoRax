@@ -18,9 +18,6 @@ Use both **top** and **bottom** case designs with **M2 heat-set inserts** and **
 | Plastic optic fiber (1.2~1.5mm, optional)  |  1  | [Amazon](https://a.co/d/c6yUWJW)
 | Plastic optic fiber (5mm, optional)        |  1  | [Amazon](https://a.co/d/c6yUWJW)
 
-
-![](../doc/CASE0.JPG)
-
 ---
 
 ##  Step 1. Print the Cases
@@ -39,8 +36,7 @@ You can use:
 - You can use a soldering iron or a dedicated tool
 - Gently press the inserts into place while heating
 
-![](../doc/CASE1.JPG)
-![](../doc/CASE2.JPG)
+> **Note**: Assembly images are not available in this repository.
 
 ---
 
@@ -49,8 +45,7 @@ You can use:
 - Plastic fiber makes LED glow look much better
 - Push fiber into LED holes
 
-<img src="../doc/CASE3.JPG" width="48%"> <img src="../doc/CASE4.JPG" width="48%">
-<img src="../doc/CASE5.JPG" width="48%"> <img src="../doc/CASE6.JPG" width="48%">
+> **Note**: Assembly images are not available in this repository.
 
 ---
 
@@ -58,10 +53,7 @@ You can use:
 
 - Align top and bottom case
 - Use M2 screws to secure
-- Don’t overtighten
+- Don't overtighten
 
-![](../doc/CASE7.JPG)
-<img src="../doc/CASE8.JPG" width="48%">
-<img src="../doc/CASE9.JPG" width="48%">
-![](../doc/CASE10.JPG)
+> **Note**: Assembly images are not available in this repository.
 ---

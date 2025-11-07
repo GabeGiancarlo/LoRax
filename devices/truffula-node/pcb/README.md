@@ -31,16 +31,16 @@ The PCB design is currently in progress using Eagle CAD. Design images and progr
 
 ### Design Images
 
-![Truffula Node PCB Design](shared/media/images/devices/truffula-node/Truffula-Plate-v1-no-top.png)
+![Truffula Node PCB Design](../../shared/media/images/devices/truffula-node/Truffula-Plate-v1-no-top.png)
 *Current PCB layout showing component placement*
 
-![Truffula Node Electronics](shared/media/images/devices/truffula-node/truffla-electronics.png)
+![Truffula Node Electronics](../../shared/media/images/devices/truffula-node/truffla-electronics.png)
 *Electronics assembly view*
 
-![Adafruit Feather ESP32-S3](shared/media/images/devices/truffula-node/adafruit_products_FESPS3_top_headers.jpg)
+![Adafruit Feather ESP32-S3](../../shared/media/images/devices/truffula-node/adafruit_products_FESPS3_top_headers.jpg)
 *Adafruit Feather ESP32-S3 with headers*
 
-![Adafruit Feather ESP32-S3 Coin](shared/media/images/devices/truffula-node/adafruit_FESPS3_coin.jpg)
+![Adafruit Feather ESP32-S3 Coin](../../shared/media/images/devices/truffula-node/adafruit_FESPS3_coin.jpg)
 *Adafruit Feather ESP32-S3 reference*
 
 ### Current Status

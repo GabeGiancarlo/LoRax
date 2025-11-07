@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Bar-ba-loot](shared/media/images/reference/barbaloot-book.jpeg)
+![Bar-ba-loot](../../shared/media/images/reference/barbaloot-book.jpeg)
 *Bar-ba-loot — the controller with a cart and a horn*
 
 </div>
