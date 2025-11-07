@@ -1,8 +1,8 @@
-# Tree Node Firmware
+# Truffula Node Firmware
 
 ## Overview
 
-The Tree Node runs **Arduino-based firmware** on the Adafruit Feather ESP32-S3 with:
+The Truffula Node runs **Arduino-based firmware** on the Adafruit Feather ESP32-S3 with:
 
 - **Mesh relay**: Auto-forwarding, hop count tracking
 - **Deep sleep**: ULP wake, 25µA average draw
@@ -25,7 +25,7 @@ The Tree Node runs **Arduino-based firmware** on the Adafruit Feather ESP32-S3 w
 
 ## Configuration
 
-Edit `tree-node.ino` to configure:
+Edit `truffula-node.ino` to configure:
 
 - **LoRa frequency**: `915E6` (North America) or `868E6` (Europe)
 - **HMAC key**: Generate secure 32-byte key

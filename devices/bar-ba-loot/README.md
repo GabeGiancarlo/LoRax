@@ -60,7 +60,7 @@ The Bar-ba-loot runs **Arduino-based firmware**:
 - **OLED UI**: Menu system, status display
 - **LoRa stack**: Command transmission, response handling
 - **Button handling**: Debounced input, navigation
-- **Mesh routing**: Multi-hop support via Tree Nodes
+- **Mesh routing**: Multi-hop support via Truffula Nodes
 
 ---
 

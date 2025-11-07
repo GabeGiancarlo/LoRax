@@ -2,20 +2,20 @@
 
 ## Prerequisites
 
-- Assembled Tree Node (from [Step 3](03_assemble_case.md))
+- Assembled Truffula Node (from [Step 3](03_assemble_case.md))
 - Bar-ba-loot controller (paired)
 - Lorax endpoint (optional, for full mesh test)
 - Open field or clear line-of-sight
 
 ## Initial Setup
 
-1. **Power on Tree Node**:
+1. **Power on Truffula Node**:
    - LED should blink (initializing)
    - Then go dark (deep sleep active)
 
 2. **Check serial output** (115200 baud):
    ```
-   Tree Node v1.0
+   Truffula Node v1.0
    Battery: 4.1V (100%)
    RFM95W initialized
    Entering deep sleep...
@@ -31,17 +31,17 @@
 4. **Walk away** from endpoint, test maximum range
 5. **Record**: Maximum reliable range (typically 500-800m urban)
 
-### Test 2: Single Hop (Tree Node Relay)
+### Test 2: Single Hop (Truffula Node Relay)
 
-1. **Position Tree Node** halfway between controller and endpoint
-2. **Power on Tree Node** → should auto-join mesh
+1. **Position Truffula Node** halfway between controller and endpoint
+2. **Power on Truffula Node** → should auto-join mesh
 3. **Send test packet** from controller
-4. **Tree Node should forward** → endpoint receives
+4. **Truffula Node should forward** → endpoint receives
 5. **Record**: Extended range (should reach 2-3km)
 
-### Test 3: Multi-Hop (Multiple Tree Nodes)
+### Test 3: Multi-Hop (Multiple Truffula Nodes)
 
-1. **Deploy 2 Tree Nodes** in chain:
+1. **Deploy 2 Truffula Nodes** in chain:
    - Controller → Node 1 (1.5km) → Node 2 (1.5km) → Endpoint
 2. **Send test packet** → verify hop count
 3. **Check serial logs**: Each node should show hop increment
@@ -49,7 +49,7 @@
 
 ## RSSI Monitoring
 
-Tree Nodes log RSSI values:
+Truffula Nodes log RSSI values:
 
 ```
 RSSI: -95 dBm (weak)
@@ -99,7 +99,7 @@ RSSI: -65 dBm (excellent)
 
 ## Next Steps
 
-Range verified? Tree Node is ready for deployment! See mesh deployment guide in main docs.
+Range verified? Truffula Node is ready for deployment! See mesh deployment guide in main docs.
 
 ---
 

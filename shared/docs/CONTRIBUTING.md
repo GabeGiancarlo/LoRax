@@ -57,7 +57,7 @@ Thank you for considering contributing to LoRax! This document provides guidelin
 Use clear, descriptive messages:
 
 ```
-feat: add Tree Node relay support
+feat: add Truffula Node relay support
 fix: correct HMAC validation on hop forwarding
 docs: update BOM links for RFM95W
 refactor: split crypto functions into separate module
@@ -124,7 +124,7 @@ devices/
 
 - **Lorax (Luckfox)**: C/C++ with Luckfox SDK
 - **Bar-ba-loot (ESP32)**: Arduino framework
-- **Tree Node (ESP32-S3)**: Arduino framework with deep sleep
+- **Truffula Node (ESP32-S3)**: Arduino framework with deep sleep
 
 ### Shared SDK
 

@@ -2,7 +2,7 @@
 
 ## Antenna Assembly
 
-The Tree Node uses a **pop-out 10dBi antenna** for extended range.
+The Truffula Node uses a **pop-out 10dBi antenna** for extended range.
 
 ### Step 1: Antenna Connector
 
@@ -57,7 +57,7 @@ The Tree Node uses a **pop-out 10dBi antenna** for extended range.
 
 1. **Power on** (via USB first, no battery):
    - LED should blink
-   - Serial output: "Tree Node initializing"
+   - Serial output: "Truffula Node initializing"
 
 2. **Attach battery**:
    - MAX17048 should read voltage

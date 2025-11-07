@@ -60,7 +60,7 @@ See [Attribution](#-attribution) and [`CREDITS.md`](CREDITS.md) for complete det
 - [Devices](#devices)
   - [Lorax (Endpoint)](#lorax-endpoint)
   - [Bar-ba-loot (Controller)](#bar-ba-loot-controller)
-  - [Tree Node (Relay)](#tree-node-relay)
+  - [Truffula Node (Relay)](#truffula-node-relay)
 - [Protocol & Security](#protocol--security)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -106,7 +106,7 @@ LoRax follows a **device-agnostic, modular architecture** where each device main
 └─────────────────────────────────────────────────────────────────┘
 
 ┌──────────────┐         ┌──────────────┐         ┌──────────────┐
-│  Bar-ba-loot │ ◄────► │  Tree Node   │ ◄────► │    Lorax     │
+│  Bar-ba-loot │ ◄────► │ Truffula Node│ ◄────► │    Lorax     │
 │ (Controller)  │  LoRa   │   (Relay)    │  LoRa   │  (Endpoint)  │
 │  ESP32 + OLED │ 915MHz  │  ESP32-S3    │ 915MHz  │  Luckfox Pico│
 │              │         │   + RFM95W   │         │   Max 256MB   │
@@ -149,7 +149,7 @@ LoRax/
 │   ├── bar-ba-loot/            # Handheld C2 controller
 │   │   └── [same structure]
 │   │
-│   └── tree-node/              # Mesh relay extender
+│   └── truffula-node/          # Mesh relay extender
 │       └── [same structure]
 │
 ├── CREDITS.md                  # Attribution and credits
@@ -191,7 +191,7 @@ LoRax/
 
 #### Mesh Routing
 
-- **Auto-Discovery**: Tree Nodes broadcast HELLO packets every 30s with RSSI, battery, hop count
+- **Auto-Discovery**: Truffula Nodes broadcast HELLO packets every 30s with RSSI, battery, hop count
 - **Routing Table**: Each node maintains a neighbor table with device IDs, RSSI, hop distance
 - **Hop Limit**: Maximum 8 hops (prevents routing loops, reduces latency)
 - **Best Path**: Nodes forward packets to neighbor closest to destination (by hop count + RSSI)
@@ -277,11 +277,11 @@ LoRax/
 
 ---
 
-### Tree Node (Relay)
+### Truffula Node (Relay)
 
 > *"Unless someone like you cares a whole awful lot, nothing is going to get better. It's not."*
 
-**Tree Node** is a **drop-and-forget LoRa relay** that extends your LoRax mesh network by **3km per hop** with a **20+ day battery life** on a single 500mAh charge.
+**Truffula Node** is a **drop-and-forget LoRa relay** that extends your LoRax mesh network by **3km per hop** with a **20+ day battery life** on a single 500mAh charge.
 
 #### Specifications
 
@@ -314,7 +314,7 @@ LoRax/
 5. **Forward**: Transmit to next hop or destination
 6. **Sleep**: Return to deep sleep (25µA average)
 
-**📁 Device Directory**: [`devices/tree-node/`](devices/tree-node/)
+**📁 Device Directory**: [`devices/truffula-node/`](devices/truffula-node/)
 
 ---
 
@@ -326,7 +326,7 @@ LoRax implements **defense-in-depth security** across multiple layers:
 
 #### 1. Physical Security
 - **Keychain-sized devices**: Easy to deploy discretely (vents, under cars, foliage)
-- **Magnetic mounting**: Tree Nodes attach to metal surfaces
+- **Magnetic mounting**: Truffula Nodes attach to metal surfaces
 - **Weather-resistant**: Optional waterproofing for outdoor deployment
 
 #### 2. Network Security
@@ -410,7 +410,7 @@ git submodule update --init --recursive
 # Build specific device
 ./shared/build/build.sh lorax
 ./shared/build/build.sh bar-ba-loot
-./shared/build/build.sh tree-node
+./shared/build/build.sh truffula-node
 ```
 
 #### Dependency Installation
@@ -437,7 +437,7 @@ cd devices/lorax/firmware
 # Requires: Luckfox SDK, Buildroot configuration
 ```
 
-#### Bar-ba-loot / Tree Node (ESP32)
+#### Bar-ba-loot / Truffula Node (ESP32)
 ```bash
 cd devices/bar-ba-loot/firmware
 # Open in Arduino IDE
@@ -453,10 +453,10 @@ cd devices/bar-ba-loot/firmware
 
 **Scenario**: Authorized network security assessment on your own network or a network with explicit written permission
 
-1. **Deploy Tree Node** (1.5km from assessment area, elevated position)
-   - Place Tree Node in elevated location (tree, building, antenna mast)
+1. **Deploy Truffula Node** (1.5km from assessment area, elevated position)
+   - Place Truffula Node in elevated location (tree, building, antenna mast)
    - Extend 10dBi antenna for maximum range
-   - Power on → Tree Node auto-joins mesh via HELLO broadcast
+   - Power on → Truffula Node auto-joins mesh via HELLO broadcast
 
 2. **Deploy Lorax Endpoint** (near authorized assessment network)
    - Place Lorax device near the authorized network (vent, secure location, foliage)
@@ -466,11 +466,11 @@ cd devices/bar-ba-loot/firmware
    - Power on controller, OLED shows connected devices
    - Navigate menu → Select Lorax endpoint
    - Select analysis type → "Nmap TCP SYN Scan"
-   - Send command → Packet routed via Tree Node to Lorax
+   - Send command → Packet routed via Truffula Node to Lorax
 
 4. **Receive Results**
    - Lorax executes authorized analysis, results encrypted with AES-256-GCM
-   - Results forwarded back via Tree Node to Bar-ba-loot
+   - Results forwarded back via Truffula Node to Bar-ba-loot
    - Display on OLED → Review network topology for educational purposes
 
 ### Command Examples

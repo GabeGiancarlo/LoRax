@@ -2,8 +2,8 @@
 
 ## Files Required
 
-- `enclosures/tree-node_long.stl` (top)
-- `enclosures/tree-node_long_bottom.stl` (bottom)
+- `enclosures/truffula-node_long.stl` (top)
+- `enclosures/truffula-node_long_bottom.stl` (bottom)
 
 ## 3D Printer Settings
 

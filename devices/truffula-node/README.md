@@ -1,9 +1,9 @@
-# Tree Node — LoRa Mesh Relay
+# Truffula Node — LoRa Mesh Relay
 
 > *"Unless someone like you cares a whole awful lot, nothing is going to get better. It's not."*  
 > — The Lorax
 
-The **Tree Node** is a **drop-and-forget LoRa relay** that extends your LoRax network by **3km per hop**.
+The **Truffula Node** is a **drop-and-forget LoRa relay** that extends your LoRax network by **3km per hop**.
 
 ---
 
@@ -20,7 +20,7 @@ A **keychain-sized, 20+ day battery, 10dBi antenna relay** that:
 
 ## Why You Need It
 
-| Problem | Tree Node Solution |
+| Problem | Truffula Node Solution |
 |---------|--------------------|
 | 500m urban range | **3km/hop** → 6km with 2 nodes |
 | Dead zones | Drop in path → auto-routes |
@@ -56,7 +56,7 @@ A **keychain-sized, 20+ day battery, 10dBi antenna relay** that:
 
 ## Firmware
 
-The Tree Node runs **Arduino-based firmware** with:
+The Truffula Node runs **Arduino-based firmware** with:
 
 - **Mesh relay**: Auto-forwarding, hop count tracking
 - **Deep sleep**: ULP wake, 25µA average draw

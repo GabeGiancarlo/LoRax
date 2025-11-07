@@ -7,7 +7,7 @@ LoRax is a **modular, device-agnostic LoRa mesh ecosystem** for remote network r
 - **Scalability**: Add new devices with identical structure
 - **Modularity**: Shared SDK, per-device firmware
 - **Security**: HMAC + AES-256 end-to-end encryption
-- **Range**: Multi-hop mesh via Tree Node relays
+- **Range**: Multi-hop mesh via Truffula Node relays
 
 ---
 
@@ -21,8 +21,8 @@ LoRax is a **modular, device-agnostic LoRa mesh ecosystem** for remote network r
          │ LoRa (915MHz)
          │
     ┌────▼────┐
-    │Tree Node│  Relay Node (ESP32-S3)
-    │(Relay)  │
+    │Truffula │  Relay Node (ESP32-S3)
+    │  Node   │
     └────┬────┘
          │ LoRa
          │
@@ -47,7 +47,7 @@ LoRax/
 ├── devices/             # One folder per device (identical structure)
 │   ├── lorax/           # Endpoint device
 │   ├── bar-ba-loot/     # Controller device
-│   └── tree-node/       # Relay device
+│   └── truffula-node/   # Relay device
 │
 ├── CREDITS.md           # Attribution
 ├── LICENSE              # GPL v3
@@ -100,7 +100,7 @@ LoRax/
 - **Power**: 500mAh LiPo, 2-3 days active
 - **Firmware**: Arduino-based (ESP32)
 
-### Tree Node (Relay)
+### Truffula Node (Relay)
 
 - **MCU**: Adafruit Feather ESP32-S3
 - **Role**: Mesh relay, extend range
@@ -113,7 +113,7 @@ LoRax/
 
 ### Auto-Discovery
 
-1. **HELLO broadcasts**: Tree Nodes announce presence (30s interval)
+1. **HELLO broadcasts**: Truffula Nodes announce presence (30s interval)
 2. **Neighbor table**: Each node maintains list of nearby nodes
 3. **Hop count**: Increments with each relay
 
@@ -138,13 +138,13 @@ Controller → Node A → Node B → Endpoint
 
 - **Lorax**: ~150mA scanning, ~50mA idle
 - **Bar-ba-loot**: ~80mA display on, ~30mA display off
-- **Tree Node**: ~100mA RX, ~25µA deep sleep
+- **Truffula Node**: ~100mA RX, ~25µA deep sleep
 
 ### Deep Sleep
 
 - **Lorax**: Linux suspend (S3 state)
 - **Bar-ba-loot**: ESP32 light sleep
-- **Tree Node**: ESP32-S3 ULP deep sleep (wake every 10s)
+- **Truffula Node**: ESP32-S3 ULP deep sleep (wake every 10s)
 
 ---
 

@@ -1,4 +1,4 @@
-# Tree Node — Bill of Materials
+# Truffula Node — Bill of Materials
 
 | Qty | Part | Price | Link |
 |-----|------|-------|------|

@@ -1,8 +1,8 @@
-# Tree Node PCB
+# Truffula Node PCB
 
 ## Design Overview
 
-The Tree Node PCB is a **custom design** combining:
+The Truffula Node PCB is a **custom design** combining:
 
 - **Adafruit Feather ESP32-S3** (main MCU)
 - **HopeRF RFM95W** (915MHz LoRa radio)
@@ -19,8 +19,8 @@ The Tree Node PCB is a **custom design** combining:
 
 ## PCB Design Files
 
-- **KiCad project**: `tree-node.kicad_pcb` (when available)
-- **Schematic**: `tree-node.kicad_sch` (when available)
+- **KiCad project**: `truffula-node.kicad_pcb` (when available)
+- **Schematic**: `truffula-node.kicad_sch` (when available)
 - **Gerber files**: `gerbers/` (when available)
 
 ## Component Placement

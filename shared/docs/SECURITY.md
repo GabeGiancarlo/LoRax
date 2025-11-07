@@ -105,7 +105,7 @@ Controller → [HMAC check] → Node A → [HMAC check] → Node B → Endpoint
 ### Physical Security
 
 - **Stealth deployment**: Keychain-sized devices
-- **Magnetic mounting**: Tree Nodes can attach to metal surfaces
+- **Magnetic mounting**: Truffula Nodes can attach to metal surfaces
 - **Weather resistance**: Optional waterproofing for outdoor deployment
 
 ### Operational Security

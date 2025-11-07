@@ -1,9 +1,9 @@
-# Tree Node Enclosures
+# Truffula Node Enclosures
 
 ## Files
 
-- **tree-node_long.stl** - Top case (accommodates 19cm antenna when collapsed)
-- **tree-node_long_bottom.stl** - Bottom case with magnet pocket
+- **truffula-node_long.stl** - Top case (accommodates 19cm antenna when collapsed)
+- **truffula-node_long_bottom.stl** - Bottom case with magnet pocket
 
 ## Design Notes
 

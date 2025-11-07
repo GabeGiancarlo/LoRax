@@ -3,7 +3,7 @@
  * @brief LoRax mesh networking protocol
  * 
  * Mesh relay and routing functions for multi-hop LoRa communication
- * across Lorax, Bar-ba-loot, and Tree Node devices.
+ * across Lorax, Bar-ba-loot, and Truffula Node devices.
  * 
  * Adapted from KaliAssistant's Fox-Jack (https://github.com/KaliAssistant/Fox-Jack)
  * 

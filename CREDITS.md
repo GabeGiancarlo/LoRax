@@ -89,11 +89,11 @@ All files adapted from Fox-Jack include the attribution header:
 
 LoRax extends Fox-Jack with:
 
-- **Multi-device architecture**: Lorax (endpoint) + Bar-ba-loot (controller) + Tree Node (relay)
+- **Multi-device architecture**: Lorax (endpoint) + Bar-ba-loot (controller) + Truffula Node (relay)
 - **LoRa communication**: 915MHz wireless command/control with mesh relay
 - **Network scanning**: Nmap, ARP, and custom tools
 - **Stealth operation**: Keychain-sized discrete deployment
-- **Extended range**: Multi-hop mesh networking via Tree Nodes
+- **Extended range**: Multi-hop mesh networking via Truffula Nodes
 - **Power efficiency**: 2-3 day battery life (endpoints/controller), 20+ days (relay)
 
 ---
