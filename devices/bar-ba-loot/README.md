@@ -2,6 +2,13 @@
 
 > *"I am the Lorax. I speak for the trees. And the trees are scanning your network."*
 
+<div align="center">
+
+![Bar-ba-loot](shared/media/images/reference/barbaloot-book.jpeg)
+*Bar-ba-loot — the controller with a cart and a horn*
+
+</div>
+
 The **Bar-ba-loot** is a **handheld command & control** device that sends scan commands to remote Lorax endpoints via **915MHz LoRa**.
 
 ---

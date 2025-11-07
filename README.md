@@ -204,6 +204,13 @@ LoRax/
 
 > *"I am the Lorax. I speak for the trees."*
 
+<div align="center">
+
+![The Lorax](shared/media/images/reference/lorax-movie.avif)
+*The Lorax — speaking for network security*
+
+</div>
+
 **The Lorax** is a **discrete, keychain-sized network scanner** that operates remotely via LoRa commands from up to **1.2km** away.
 
 #### Specifications
@@ -243,6 +250,13 @@ LoRax/
 > *"The Once-ler had a cart and the cart had a horn."*  
 > Bar-ba-loot has buttons and an OLED. Much better.
 
+<div align="center">
+
+![Bar-ba-loot](shared/media/images/reference/barbaloot-book.jpeg)
+*Bar-ba-loot — the controller with a cart and a horn*
+
+</div>
+
 **Bar-ba-loot** is a **handheld control device** with an OLED display and tactile buttons for sending commands to remote Lorax endpoints for authorized network analysis.
 
 #### Specifications
@@ -280,6 +294,13 @@ LoRax/
 ### Truffula Node (Relay)
 
 > *"Unless someone like you cares a whole awful lot, nothing is going to get better. It's not."*
+
+<div align="center">
+
+![Truffula Tree](shared/media/images/reference/Truffla-tree-1.jpeg)
+*The Truffula trees — extending the network, one hop at a time*
+
+</div>
 
 **Truffula Node** is a **drop-and-forget LoRa relay** that extends your LoRax mesh network by **3km per hop** with a **20+ day battery life** on a single 500mAh charge.
 
@@ -675,6 +696,13 @@ By contributing, you agree to license your contributions under the same license 
 ## 🌲 The Lorax
 
 > *"I am the Lorax. I speak for the trees. And the trees are scanning your network."*
+
+<div align="center">
+
+![The Lorax](shared/media/images/reference/lorax-stump-book.webp)
+*The Lorax speaks for the trees — and now for network security*
+
+</div>
 
 LoRax takes its name and playful spirit from Dr. Seuss's *The Lorax*, a story about environmental responsibility and the importance of caring for what matters. In our case, we care about:
 

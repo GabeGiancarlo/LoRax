@@ -3,6 +3,13 @@
 > *"Unless someone like you cares a whole awful lot, nothing is going to get better. It's not."*  
 > — The Lorax
 
+<div align="center">
+
+![Truffula Tree](shared/media/images/reference/Truffla-tree-1.jpeg)
+*The Truffula trees — extending the network, one hop at a time*
+
+</div>
+
 The **Truffula Node** is a **drop-and-forget LoRa relay** that extends your LoRax network by **3km per hop**.
 
 ---

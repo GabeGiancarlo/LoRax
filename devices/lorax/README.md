@@ -1,7 +1,14 @@
 # Lorax — LoRa Ghost Scanner
 
-> *"Unless someone like you cares a whole awful lot, nothing is going to get better. It's not."*  
+> *"I am the Lorax. I speak for the trees."*  
 > — The Lorax
+
+<div align="center">
+
+![The Lorax](shared/media/images/reference/lorax-movie.avif)
+*The Lorax — speaking for network security*
+
+</div>
 
 The **Lorax** is a **keychain-sized, stealth network scanner** that operates remotely via LoRa from up to **1.2km** away.
 
