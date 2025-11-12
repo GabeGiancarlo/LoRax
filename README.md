@@ -132,8 +132,8 @@ LoRax/
 │   │   ├── ARCHITECTURE.md     # System architecture details
 │   │   ├── SECURITY.md          # Security model, threat analysis
 │   │   └── CONTRIBUTING.md      # Contribution guidelines
-│   ├── reference/              # Fox-Jack reference (submodule)
-│   │   └── fox-jack/           # Original Fox-Jack repository
+│   ├── reference/              # Shared reference materials
+│   │   └── fox-jack-reference/ # Fox-Jack 3D models and PCB reference files
 │   └── build/                  # Master build scripts
 │       ├── build.sh            # Multi-device build orchestrator
 │       └── dep.sh              # Dependency installer
@@ -708,7 +708,7 @@ LoRax adapts and extends several key components from Fox-Jack:
 
 #### Fox-Jack Reference Files
 
-The original Fox-Jack repository is included as a submodule at `shared/reference/fox-jack/` for reference and attribution. All original Fox-Jack files are preserved with their original licenses and attribution.
+The original Fox-Jack repository is included in `devices/oncler/fox-jack-reference/` for reference and attribution, since the Oncler device is built on the Fox-Jack foundation (same hardware platform - Luckfox Pico Max). All original Fox-Jack files are preserved with their original licenses and attribution.
 
 #### Attribution Requirements
 

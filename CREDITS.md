@@ -43,10 +43,13 @@ The following files are preserved for reference and attribution:
 
 ### Reference Repository
 
-- **`shared/reference/fox-jack/`**: Complete Fox-Jack repository as submodule (GNU GPL v3)
-  - Source code: `fox-jack/src/` (battery management, LED control, mode switching)
-  - PCB files: `fox-jack/pcb/` (KiCad projects and Gerbers)
-  - 3D models: `fox-jack/3dp/` (enclosure STL files)
+- **`devices/oncler/fox-jack-reference/`**: Complete Fox-Jack repository (GNU GPL v3)
+  - Source code: `fox-jack-reference/src/` (battery management, LED control, mode switching)
+  - PCB files: `fox-jack-reference/pcb/` (KiCad projects and Gerbers)
+  - 3D models: `fox-jack-reference/3dp/` (enclosure STL files)
+  - Build system: `fox-jack-reference/build.sh`, `fox-jack-reference/dep.sh`
+  
+  **Note**: Located in the Oncler device folder since Oncler is built on the Fox-Jack foundation (same hardware platform - Luckfox Pico Max).
 
 ### Reference Assets
 

@@ -169,12 +169,6 @@ All units are designed and tested to meet FCC Part 15 (or equivalent regional) r
 - **Search & Rescue**: Ad-hoc networks in remote areas
 - **Disaster Response**: Rapid deployment without infrastructure
 
-### Military & Tactical
-
-- **Field Operations**: Secure, decentralized communications
-- **Mobile Units**: Vehicle-to-vehicle networking
-- **Command & Control**: Distributed command networks
-
 ### Commercial & Industrial
 
 - **Remote Sites**: Mining, oil & gas, construction

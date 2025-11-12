@@ -68,22 +68,60 @@ A **portable controller** with:
 
 ## Firmware
 
-The Bar-ba-loot runs **Arduino-based firmware**:
+The Bar-ba-loot runs **Arduino-based firmware** located in [`../../firmware/controller/`](../../firmware/controller/):
 
 - **OLED UI**: Menu system, status display
 - **LoRa stack**: Command transmission, response handling
 - **Button handling**: Debounced input, navigation
 - **Mesh routing**: Multi-hop support via Truffula Nodes
 
+### Building & Flashing
+
+1. Open the Arduino sketch from `firmware/controller/` in Arduino IDE
+2. Select: **Tools → Board → ESP32 Arduino → TTGO T3**
+3. Install required libraries (see firmware directory for dependencies)
+4. Upload sketch via USB-C
+
 ---
 
-## See Also
+## PCB Design
 
-- [BOM.md](BOM.md) — Buy links
-- [pcb/](pcb/) — KiCad PCB design
-- [firmware/](firmware/) — Arduino sketches
-- [enclosures/](enclosures/) — 3D printed case
-- [build-journey/](build-journey/) — Step-by-step build guide
+KiCad PCB design files will be added when the design is complete. The design will include:
+
+- TTGO LoRa32 T3 module integration
+- Kailh Choc switch footprint placement
+- Battery management circuit
+- Power distribution and USB-C charging
+
+---
+
+## Enclosures
+
+3D printed case designs will be added when ready. Design goals:
+
+- Ergonomic button layout
+- OLED display protection
+- FPV antenna cap design
+- Room for future expansion
+
+**Note**: Before printing enclosures, breadboard the electronics and verify functionality.
+
+---
+
+## Getting Started
+
+### Recommended Build Order
+
+1. **Breadboard first**: Test electronics on a breadboard before soldering
+2. **Verify firmware**: Flash and test controller firmware
+3. **Test LoRa communication**: Verify mesh connectivity with other devices
+4. **PCB assembly**: Once verified, solder components to PCB
+5. **Enclosure**: Design and print case after electronics are confirmed working
+
+### Parts & Documentation
+
+- [BOM.md](BOM.md) — Complete bill of materials with buy links
+- [`../../firmware/controller/`](../../firmware/controller/) — Arduino firmware source
 
 ---
 

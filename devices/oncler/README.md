@@ -63,22 +63,81 @@ A **discrete, 58×23×9mm endpoint** that:
 
 ## Firmware
 
-The Oncler runs **custom firmware** on the Luckfox Pico Max:
+The Oncler runs **custom firmware** on the Luckfox Pico Max, located in [`../../firmware/endpoint/`](../../firmware/endpoint/):
 
 - **Network scanning**: Nmap integration, ARP discovery
 - **LoRa stack**: HMAC-secured packet handling
 - **Battery management**: MAX17048 fuel gauge
 - **Mode switching**: Multiple operational modes
 
+### Building & Flashing
+
+1. Set up Luckfox SDK and Buildroot environment
+2. Navigate to `firmware/endpoint/` directory
+3. Follow build instructions in the firmware directory
+4. Flash firmware to Luckfox Pico Max via USB
+
+**Note**: Firmware is based on KaliAssistant's Fox-Jack SDK and mode framework.
+
 ---
 
-## See Also
+## PCB Design
 
-- [BOM.md](BOM.md) — Buy links
-- [pcb/](pcb/) — KiCad PCB design
-- [firmware/](firmware/) — Luckfox firmware
-- [enclosures/](enclosures/) — 3D printed case
-- [build-journey/](build-journey/) — Step-by-step build guide
+KiCad PCB design files will be added when the design is complete. The design will include:
+
+- Luckfox Pico Max module integration
+- RFM95W LoRa radio module
+- MAX17048 fuel gauge circuit
+- Battery management and charging
+- Power distribution and mode switching
+
+---
+
+## Enclosures
+
+3D printed case designs will be added when ready. Design goals:
+
+- Keychain-friendly form factor
+- Minimal profile for stealthy deployment
+- Rugged construction for field use
+- Hidden antenna design
+
+**3D Printing Notes**:
+- **Material**: PETG or ABS recommended
+- **Layer Height**: 0.2mm for strength
+- **Infill**: 20-30% for balance of strength/weight
+- **Supports**: Minimal, designed for easy removal
+
+**Note**: Before printing enclosures, breadboard the electronics and verify functionality.
+
+---
+
+## Root Filesystem
+
+Custom root filesystem configuration is in [`rootfs/`](rootfs/), including:
+- Custom initialization scripts (`rcS`)
+- Network scanning tools and payloads
+- System configuration files
+
+---
+
+## Getting Started
+
+### Recommended Build Order
+
+1. **Breadboard first**: Test electronics on a breadboard before soldering
+2. **Verify firmware**: Build and flash endpoint firmware
+3. **Test LoRa communication**: Verify mesh connectivity with controller
+4. **Test network scanning**: Verify Nmap/ARP functionality
+5. **PCB assembly**: Once verified, solder components to PCB
+6. **Enclosure**: Design and print case after electronics are confirmed working
+
+### Parts & Documentation
+
+- [BOM.md](BOM.md) — Complete bill of materials with buy links
+- [`../../firmware/endpoint/`](../../firmware/endpoint/) — Luckfox firmware source
+- [`rootfs/`](rootfs/) — Root filesystem configuration
+- [`fox-jack-reference/`](fox-jack-reference/) — Original Fox-Jack reference repository (build system, PCB designs, source code)
 
 ---
 
