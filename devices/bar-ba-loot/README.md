@@ -9,7 +9,7 @@
 
 </div>
 
-The **Bar-ba-loot** is a **handheld command & control** device that sends scan commands to remote Lorax endpoints via **915MHz LoRa**.
+The **Bar-ba-loot** is a **handheld command & control** device that sends scan commands to remote Oncler endpoints via **915MHz LoRa**.
 
 ---
 
@@ -38,7 +38,7 @@ A **portable controller** with:
 ## How It Works
 
 1. **Power on** → OLED shows device list
-2. **Navigate menu** with buttons → select target Lorax
+2. **Navigate menu** with buttons → select target Oncler
 3. **Select scan type** (Nmap, ARP, custom)
 4. **Send command** via LoRa → HMAC-authenticated
 5. **Display results** on OLED as they arrive

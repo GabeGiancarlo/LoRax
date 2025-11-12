@@ -58,7 +58,8 @@ See [Attribution](#-attribution) and [`CREDITS.md`](CREDITS.md) for complete det
 - [Overview](#overview)
 - [Architecture](#architecture)
 - [Devices](#devices)
-  - [Lorax (Endpoint)](#lorax-endpoint)
+  - [Oncler (Endpoint)](#oncler-endpoint)
+  - [Lorax (IP Mesh)](#lorax-ip-mesh)
   - [Bar-ba-loot (Controller)](#bar-ba-loot-controller)
   - [Truffula Node (Relay)](#truffula-node-relay)
 - [Protocol & Security](#protocol--security)
@@ -106,7 +107,7 @@ LoRax follows a **device-agnostic, modular architecture** where each device main
 └─────────────────────────────────────────────────────────────────┘
 
 ┌──────────────┐         ┌──────────────┐         ┌──────────────┐
-│  Bar-ba-loot │ ◄────► │ Truffula Node│ ◄────► │    Lorax     │
+│  Bar-ba-loot │ ◄────► │ Truffula Node│ ◄────► │   Oncler     │
 │ (Controller)  │  LoRa   │   (Relay)    │  LoRa   │  (Endpoint)  │
 │  ESP32 + OLED │ 915MHz  │  ESP32-S3    │ 915MHz  │  Luckfox Pico│
 │              │         │   + RFM95W   │         │   Max 256MB   │
@@ -138,13 +139,18 @@ LoRax/
 │       └── dep.sh              # Dependency installer
 │
 ├── devices/                    # One folder per device
-│   ├── lorax/                  # Ghost scanner endpoint
+│   ├── oncler/                 # Ghost scanner endpoint
 │   │   ├── README.md           # Device overview
 │   │   ├── BOM.md              # Bill of materials
 │   │   ├── pcb/                # KiCad PCB files
 │   │   ├── firmware/           # Luckfox firmware
 │   │   ├── enclosures/         # 3D models (STL/STEP)
 │   │   └── build-journey/       # Step-by-step guides
+│   │
+│   ├── lorax/                  # IP Mesh MANET radio
+│   │   ├── README.md           # Device overview
+│   │   ├── BOM.md              # Bill of materials
+│   │   └── [structure TBD]
 │   │
 │   ├── bar-ba-loot/            # Handheld C2 controller
 │   │   └── [same structure]
@@ -200,18 +206,18 @@ LoRax/
 
 ## 🎮 Devices
 
-### Lorax (Endpoint)
+### Oncler (Endpoint)
 
 > *"I am the Lorax. I speak for the trees."*
 
 <div align="center">
 
-![The Lorax](shared/media/images/reference/lorax-movie.avif)
-*The Lorax — speaking for network security*
+![The Oncler](shared/media/images/reference/lorax-movie.avif)
+*The Oncler — speaking for network security*
 
 </div>
 
-**The Lorax** is a **discrete, keychain-sized network scanner** that operates remotely via LoRa commands from up to **1.2km** away.
+**The Oncler** is a **discrete, keychain-sized network scanner** that operates remotely via LoRa commands from up to **1.2km** away.
 
 #### Specifications
 
@@ -241,6 +247,56 @@ LoRax/
 - **Battery Management**: MAX17048 fuel gauge integration
 - **Power Management**: Linux suspend/resume for deep sleep
 
+**📁 Device Directory**: [`devices/oncler/`](devices/oncler/)
+
+---
+
+### Lorax (IP Mesh)
+
+> *"I am the Lorax. I speak for the trees."*
+
+<div align="center">
+
+![The Lorax](shared/media/images/reference/lorax-movie.avif)
+*The Lorax — speaking for network security*
+
+</div>
+
+**The Lorax** is a **professional-grade IP Mesh MANET radio** that forms self-organizing, self-healing wireless networks for voice, data, and video communication. Built with industrial-grade components and designed for rugged field deployment.
+
+#### Specifications
+
+| Spec | Value |
+|------|-------|
+| **SBC** | i.MX 8M Plus Quad-core (USA Manufactured) |
+| **RAM** | 4GB |
+| **Storage** | 64GB eMMC |
+| **GPU** | 16 GFLOPS OpenGL ES 3.1/3.0, Vulkan, OpenCL 1.2 FP |
+| **VPU** | 1080p60 h.264 & h.265 encoder/decoder |
+| **WiFi** | 2.4GHz MU-MIMO 2x2, WPA3, 802.11ax (WiFi 6), MCS 12/13 (WiFi 7 capable) |
+| **LoRa/GPS** | Parallel LoRa/GPS radio module |
+| **GPS** | U-blox M8 (anti-jamming, anti-spoofing) |
+| **Security** | TPM 2.0 secure crypto-processor |
+| **Sensors** | 3-axis accelerometer |
+| **Connectivity** | USB 3.0, mPCIe 3.0, 1GB Ethernet (IP68 4-pin data port) |
+| **PTT** | 6-pin Hirose connector (full PTT functionality) |
+| **Temperature** | Industrial (-40°C to +85°C) |
+| **Antennas** | Custom ruggedized TNC male bend and stay gooseneck antennas included |
+
+#### Capabilities
+
+- **MANET Networking**: Self-organizing, self-healing mesh network without infrastructure
+- **Dynamic Routing**: Automatic path selection and network adaptation
+- **Multi-Radio**: WiFi 6/7 + LoRa/GPS parallel operation
+- **Industrial Grade**: Ruggedized components, wide temperature range, long-term availability
+- **Secure Communication**: TPM 2.0 security, WPA3 WiFi, encrypted mesh protocols
+- **Modular Design**: Upgradable wireless modules (sub-GHz 900-928MHz and 5GHz options available)
+
+#### Platform Options
+
+- **Linux**: Custom mesh routing firmware (default)
+- **Modular Wireless**: Future sub-GHz and 5GHz radio module upgrades available
+
 **📁 Device Directory**: [`devices/lorax/`](devices/lorax/)
 
 ---
@@ -257,7 +313,7 @@ LoRax/
 
 </div>
 
-**Bar-ba-loot** is a **handheld control device** with an OLED display and tactile buttons for sending commands to remote Lorax endpoints for authorized network analysis.
+**Bar-ba-loot** is a **handheld control device** with an OLED display and tactile buttons for sending commands to remote Oncler endpoints for authorized network analysis.
 
 #### Specifications
 
@@ -406,7 +462,7 @@ AES Key: PBKDF2(master, "AES", salt, iterations=10000)
 - **Git**: For cloning repository and submodules
 - **KiCad**: For PCB design (optional, for hardware modifications)
 - **Arduino IDE** or **PlatformIO**: For ESP32 firmware development
-- **Luckfox SDK**: For Luckfox Pico Max firmware (see [`devices/lorax/firmware/README.md`](devices/lorax/firmware/README.md))
+- **Luckfox SDK**: For Luckfox Pico Max firmware (see [`devices/oncler/firmware/README.md`](devices/oncler/firmware/README.md))
 - **3D Printer**: For enclosure fabrication (FDM or SLA)
 
 ### Clone Repository
@@ -429,7 +485,7 @@ git submodule update --init --recursive
 ./shared/build/build.sh
 
 # Build specific device
-./shared/build/build.sh lorax
+./shared/build/build.sh oncler
 ./shared/build/build.sh bar-ba-loot
 ./shared/build/build.sh truffula-node
 ```
@@ -451,10 +507,10 @@ git submodule update --init --recursive
 
 Each device has its own build process:
 
-#### Lorax (Luckfox)
+#### Oncler (Luckfox)
 ```bash
-cd devices/lorax/firmware
-# Follow instructions in devices/lorax/firmware/README.md
+cd devices/oncler/firmware
+# Follow instructions in devices/oncler/firmware/README.md
 # Requires: Luckfox SDK, Buildroot configuration
 ```
 
@@ -479,18 +535,18 @@ cd devices/bar-ba-loot/firmware
    - Extend 10dBi antenna for maximum range
    - Power on → Truffula Node auto-joins mesh via HELLO broadcast
 
-2. **Deploy Lorax Endpoint** (near authorized assessment network)
-   - Place Lorax device near the authorized network (vent, secure location, foliage)
+2. **Deploy Oncler Endpoint** (near authorized assessment network)
+   - Place Oncler device near the authorized network (vent, secure location, foliage)
    - Device enters deep sleep, waits for commands
 
 3. **Send Command from Bar-ba-loot**
    - Power on controller, OLED shows connected devices
-   - Navigate menu → Select Lorax endpoint
+   - Navigate menu → Select Oncler endpoint
    - Select analysis type → "Nmap TCP SYN Scan"
-   - Send command → Packet routed via Truffula Node to Lorax
+   - Send command → Packet routed via Truffula Node to Oncler
 
 4. **Receive Results**
-   - Lorax executes authorized analysis, results encrypted with AES-256-GCM
+   - Oncler executes authorized analysis, results encrypted with AES-256-GCM
    - Results forwarded back via Truffula Node to Bar-ba-loot
    - Display on OLED → Review network topology for educational purposes
 
@@ -664,7 +720,7 @@ All files adapted from Fox-Jack include the attribution header:
 This attribution appears in:
 - Build scripts (`shared/build/build.sh`, `shared/build/dep.sh`)
 - SDK headers (`shared/sdk/lorax_*.h`)
-- System initialization scripts (`devices/lorax/rootfs/rcS`)
+- System initialization scripts (`devices/oncler/rootfs/rcS`)
 - PCB design documentation
 
 #### Permission & License

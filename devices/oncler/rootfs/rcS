@@ -4,7 +4,7 @@
 # Adapted from KaliAssistant's Fox-Jack (https://github.com/KaliAssistant/Fox-Jack)
 # Original Fox-Jack startup logic with LoRax modifications
 
-echo "🚀 Starting LoRax system..."
+echo "🚀 Starting Oncler system..."
 
 # Initialize LoRa module
 echo "📡 Initializing LoRa module..."
@@ -18,4 +18,4 @@ echo "🔍 Starting network scanning services..."
 echo "🔋 Starting battery management..."
 # TODO: Add battery telemetry startup
 
-echo "✅ LoRax system started!"
+echo "✅ Oncler system started!"

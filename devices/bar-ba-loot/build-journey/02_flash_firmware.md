@@ -60,7 +60,7 @@ Edit `bar-ba-loot.ino`:
 
 ## Next Steps
 
-Firmware running? Test with Lorax endpoint and proceed to case assembly!
+Firmware running? Test with Oncler endpoint and proceed to case assembly!
 
 ---
 

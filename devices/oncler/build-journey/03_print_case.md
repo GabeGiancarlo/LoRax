@@ -2,8 +2,8 @@
 
 ## Files Required
 
-- `enclosures/lorax_case.stl` (or `.step` for CAD)
-- `enclosures/lorax_case_bottom.stl`
+- `enclosures/oncler_case.stl` (or `.step` for CAD)
+- `enclosures/oncler_case_bottom.stl`
 
 ## 3D Printer Settings
 

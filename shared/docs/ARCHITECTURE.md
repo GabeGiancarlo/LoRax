@@ -27,7 +27,7 @@ LoRax is a **modular, device-agnostic LoRa mesh ecosystem** for remote network r
          │ LoRa
          │
     ┌────▼────┐
-    │  Lorax  │  Ghost Scanner (Luckfox)
+    │ Oncler  │  Ghost Scanner (Luckfox)
     │(Endpoint)│
     └─────────┘
 ```
@@ -45,7 +45,8 @@ LoRax/
 │   └── build/           # Shared build tools
 │
 ├── devices/             # One folder per device (identical structure)
-│   ├── lorax/           # Endpoint device
+│   ├── oncler/          # Endpoint device (LoRa scanner)
+│   ├── lorax/           # IP Mesh MANET radio
 │   ├── bar-ba-loot/     # Controller device
 │   └── truffula-node/   # Relay device
 │
@@ -86,12 +87,19 @@ LoRax/
 
 ## Device Types
 
-### Lorax (Endpoint)
+### Oncler (Endpoint)
 
 - **MCU**: Luckfox Pico Max (256MB)
 - **Role**: Execute Nmap/ARP scans
 - **Power**: 500mAh LiPo, 2-3 days active
 - **Firmware**: Custom Linux-based (Luckfox SDK)
+
+### Lorax (IP Mesh)
+
+- **SBC**: i.MX 8M Plus Quad-core, 4GB RAM, 64GB eMMC
+- **Role**: MANET mesh networking, voice/data/video
+- **Wireless**: WiFi 6/7 + LoRa/GPS parallel operation
+- **Firmware**: Custom Linux mesh routing firmware
 
 ### Bar-ba-loot (Controller)
 
@@ -136,15 +144,17 @@ Controller → Node A → Node B → Endpoint
 
 ### Active Mode
 
-- **Lorax**: ~150mA scanning, ~50mA idle
+- **Oncler**: ~150mA scanning, ~50mA idle
 - **Bar-ba-loot**: ~80mA display on, ~30mA display off
 - **Truffula Node**: ~100mA RX, ~25µA deep sleep
+- **Lorax**: Varies by operation mode (WiFi/LoRa active)
 
 ### Deep Sleep
 
-- **Lorax**: Linux suspend (S3 state)
+- **Oncler**: Linux suspend (S3 state)
 - **Bar-ba-loot**: ESP32 light sleep
 - **Truffula Node**: ESP32-S3 ULP deep sleep (wake every 10s)
+- **Lorax**: Linux suspend or low-power mode
 
 ---
 

@@ -25,7 +25,7 @@ source scripts/setup_env.sh
 ## Build Firmware
 
 ```bash
-cd devices/lorax/firmware
+cd devices/oncler/firmware
 
 # Configure for Luckfox Pico Max
 export LUCKFOX_BOARD=pico-max-256m
@@ -33,7 +33,7 @@ export LUCKFOX_BOARD=pico-max-256m
 # Build rootfs with LoRax firmware
 ./build.sh
 
-# Output: firmware/lorax_update.img
+# Output: firmware/oncler_update.img
 ```
 
 ## Flash to Device
@@ -46,7 +46,7 @@ export LUCKFOX_BOARD=pico-max-256m
 2. **Flash firmware**:
 ```bash
 cd tools/luckfox-tools
-./rkdevtool.py -t flash -i ../../../firmware/lorax_update.img
+./rkdevtool.py -t flash -i ../../../firmware/oncler_update.img
 ```
 
 3. **Verify boot**:

@@ -45,7 +45,7 @@
 
 ## Next Steps
 
-Device complete! Test range and mesh connectivity with Lorax endpoints.
+Device complete! Test range and mesh connectivity with Oncler endpoints.
 
 ---
 
