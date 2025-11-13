@@ -15,8 +15,8 @@ LoRax is a **modular, device-agnostic LoRa mesh ecosystem** for remote network r
 
 ```
 ┌─────────────────┐
-│  Bar-ba-loot    │  Handheld C2 Controller
-│  (ESP32)        │
+│  Bar-ba-loot    │  Premium Handheld C2 Controller
+│  (Variscite SoM)│  Phone-sized, touchscreen, IP67
 └────────┬────────┘
          │ LoRa (915MHz)
          │
@@ -103,10 +103,13 @@ LoRax/
 
 ### Bar-ba-loot (Controller)
 
-- **MCU**: TTGO LoRa32 T3 (ESP32)
-- **Role**: Send commands, display results
-- **Power**: 500mAh LiPo, 2-3 days active
-- **Firmware**: Arduino-based (ESP32)
+- **SoM**: Variscite VAR-SOM-MX8M-Plus (Quad-core Cortex-A53 @ 1.8GHz, NPU)
+- **Display**: 6.8" bar-format touchscreen (480×1280), capacitive touch
+- **Role**: Premium command & control, local AI processing, data visualization
+- **Power**: 4000mAh Li-ion, 8-12 hours active, days in standby
+- **Storage**: 64-128GB eMMC, 4-8GB RAM
+- **Enclosure**: IP67 waterproof, CNC aluminum, phone-sized (155×70×14mm)
+- **Firmware**: Linux (Yocto/Buildroot) or Android 13
 
 ### Truffula Node (Relay)
 
@@ -145,14 +148,14 @@ Controller → Node A → Node B → Endpoint
 ### Active Mode
 
 - **Oncler**: ~150mA scanning, ~50mA idle
-- **Bar-ba-loot**: ~80mA display on, ~30mA display off
+- **Bar-ba-loot**: ~560mA idle, ~1060mA active UI, ~1570mA full load
 - **Truffula Node**: ~100mA RX, ~25µA deep sleep
 - **Lorax**: Varies by operation mode (WiFi/LoRa active)
 
 ### Deep Sleep
 
 - **Oncler**: Linux suspend (S3 state)
-- **Bar-ba-loot**: ESP32 light sleep
+- **Bar-ba-loot**: Linux suspend (S3 state), wake-on-LoRa or wake-on-touch, optional Feather S3 coprocessor for always-on BLE
 - **Truffula Node**: ESP32-S3 ULP deep sleep (wake every 10s)
 - **Lorax**: Linux suspend or low-power mode
 
